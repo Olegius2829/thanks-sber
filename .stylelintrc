@@ -1,0 +1,51 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss",
+    "stylelint-declaration-use-variable"
+  ],
+  "rules": {
+    "color-named": "never",
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-no-important": true,
+    "no-empty-first-line": true,
+    "number-leading-zero": "never",
+    "selector-max-attribute": 3,
+    "selector-max-class": 3,
+    "selector-max-combinators": 2,
+    "selector-max-id": 0,
+    "selector-max-type": 2,
+    "selector-max-universal": 0,
+    "selector-no-qualifying-type": true,
+    "shorthand-property-no-redundant-values": true,
+    "unit-whitelist": ["px", "%", "vh", "ms", "s"],
+    "order/properties-alphabetical-order": true,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/no-duplicate-dollar-variables": true,
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/selector-nest-combinators": "always",
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/dollar-variable-colon-space-after": "always",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/operator-no-newline-before": true,
+    "scss/operator-no-newline-after": true,
+    "scss/operator-no-unspaced": true,
+    "sh-waqar/declaration-use-variable": [["background-color", "color", "fill", "stroke", "font-family", "z-index"]],
+    "scss/dollar-variable-pattern": "^font-|^c-|^screen-|^time-|^z-|$-width",
+    "scss/media-feature-value-dollar-variable": "always",
+    "order/order": [
+      {
+        "type": "at-rule",
+        "name": "include"
+      },
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
+      "rules"
+    ]
+  }
+}

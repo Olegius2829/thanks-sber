@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+  min-width: 180px;
+
+  @media (max-width: $screen-tablet-max-width) {
+    min-width: 120px;
+  }
+}
+
+.logo__img {
+  display: block;
+
+  @media (max-width: $screen-tablet-max-width) {
+    width: 120px;
+  }
+}

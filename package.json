@@ -1,0 +1,39 @@
+{
+  "name": "thank",
+  "version": "0.1.0",
+  "description": "thank",
+  "main": "index.html",
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "gulp": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "1.2.x",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "4.0.x",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-svgmin": "^3.0.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-declaration-use-variable": "^1.7.2",
+    "stylelint-order": "^3.0.0"
+  },
+  "scripts": {
+    "eslint": "eslint ./app/**/*.js",
+    "eslint-fix": "eslint ./app//**/*.js --fix",
+    "stylelint": "stylelint ./app/**/*.scss -f verbose",
+    "stylelint-fix": "stylelint ./app/**/*.scss -f verbose --fix",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "stylelint-scss": "^3.18.0"
+  }
+}

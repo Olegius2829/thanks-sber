@@ -1,0 +1,182 @@
+.contacts {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.contacts__text {
+  font-size: 16px;
+  line-height: 150%;
+
+  @media (max-width: $screen-phone-max-width) {
+    font-size: 14px;
+  }
+}
+
+.contacts__title {
+  align-items: center;
+  display: inline-flex;
+  font-family: $font-geometria-medium;
+  font-size: 28px;
+  line-height: 129%;
+  margin: 0;
+  padding-bottom: 12px;
+  padding-top: 12px;
+
+  @media (max-width: $screen-phone-max-width) {
+    font-size: 20px;
+  }
+}
+
+.contacts__logo {
+  margin-right: 15px;
+}
+
+.contacts__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  padding-top: 38px;
+}
+
+.contacts__item {
+  background-image: url("/assets/images/content/marker.png");
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+  border: 1px dashed $c-contacts-item-border;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  min-width: 32.22%;
+  padding: 15px 15px 15px 60px;
+
+  @media (min-width: $screen-phone-min-width) and (max-width: $screen-phone-max-width) {
+    width: 48.5%;
+  }
+
+  @media (max-width: $screen-small-phone-max-width) {
+    width: 100%;
+  }
+}
+
+.contacts__highlight {
+  border: 1px solid $c-contacts-item-border-selected;
+}
+
+.contacts__address {
+  margin: 0;
+}
+
+.contacts__metro-wrapper {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.contacts__metro {
+  display: inline-block;
+  margin-right: 15px;
+  padding-left: 24px;
+  position: relative;
+
+  &::before {
+    background-repeat: no-repeat;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+  }
+}
+
+.contacts__metro--one {
+  &::before {
+    background-image: url("/assets/images/content/moscow-metro-logo 1.png");
+  }
+}
+
+.contacts__metro--two {
+  &::before {
+    background-image: url("/assets/images/content/moscow-metro-logo 2.png");
+  }
+}
+
+.contacts__phone {
+  color: $c-contacts-phone;
+  display: inline-block;
+  padding-bottom: 4px;
+  text-decoration: none;
+}
+
+.contacts__time {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.contacts__site {
+  color: $c-contacts-site;
+  display: table;
+  margin-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    background-color: $c-contacts-site-border;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $c-contacts-site-border-hover;
+    }
+  }
+}
+
+.contacts__bottom {
+  text-align: right;
+}
+
+.contacts__route {
+  color: $c-contacts-route;
+  font-size: 12px;
+  line-height: 150%;
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    background-color: $c-contacts-route-border;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $c-contacts-route-border-hover;
+    }
+  }
+}
+
+.contacts__map {
+  background-color: $c-contacts-map-bg;
+  background-image: url("/assets/images/content/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  min-height: 380px;
+  overflow: hidden;
+
+  @media (max-width: $screen-phone-max-width) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}

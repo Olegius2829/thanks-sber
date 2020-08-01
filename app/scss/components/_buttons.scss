@@ -1,0 +1,34 @@
+.button {
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: $time-button-transition;
+  word-wrap: break-word;
+}
+
+.button-simple {
+  background-color: $c-button-simple-bg;
+  border: none;
+  color: $c-button-simple;
+}
+
+.button-bordered {
+  background-color: $c-button-bordered-bg;
+  border: 1px solid $c-button-bordered;
+  border-radius: 8px;
+  color: $c-button-bordered;
+
+  &:hover {
+    transform: scale(1.03, 1.03);
+  }
+}
+
+.button-fill {
+  background-color: $c-button-fill-bg;
+  border-radius: 8px;
+  color: $c-button-fill;
+
+  &:hover {
+    transform: scale(1.03, 1.03);
+  }
+}

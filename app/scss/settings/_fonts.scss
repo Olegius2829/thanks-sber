@@ -1,0 +1,26 @@
+$font-default: 'Geometria';
+$font-default-medium: 'Geometria-Medium';
+$font-fallback-font-family: sans-serif;
+$font-geometria-alternative: 'Arial';
+$font-geometria-regular: $font-default, $font-geometria-alternative, $font-fallback-font-family;
+$font-geometria-medium: $font-default-medium, $font-geometria-alternative, $font-fallback-font-family;
+
+@font-face {
+  font-display: swap;
+  font-family: $font-default;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('../../assets/fonts/Geometria-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/Geometria-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: $font-default-medium;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('../../assets/fonts/Geometria-Medium.woff2') format('woff2'),
+    url('../../assets/fonts/Geometria-Medium.woff') format('woff');
+}

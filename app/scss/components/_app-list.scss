@@ -1,0 +1,26 @@
+.app-list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+
+  @media (max-width: $screen-tablet-max-width) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+.app-list__item {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  transition: $time-app-list-item;
+
+  &:hover {
+    filter: drop-shadow(0 6px 6px $c-app-list-item-shadow);
+  }
+}
+
+.app-list__logo {
+  display: block;
+}

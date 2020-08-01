@@ -1,0 +1,186 @@
+.header {
+  background-color: $c-header-bg;
+  padding-bottom: 7px;
+  padding-top: 18px;
+
+  @media (max-width: $screen-tablet-max-width) {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+.header__wrapper {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $screen-tablet-max-width) {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.header__menu-toggle {
+  background-color: $c-header-menu-toggle-bg;
+  background-image: url("../assets/images/content/menu.png");
+  background-repeat: no-repeat;
+  display: none;
+  height: 24px;
+  width: 24px;
+
+  @media (max-width: $screen-tablet-max-width) {
+    display: block;
+  }
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+  }
+}
+
+.header__menu-toggle--opened {
+  background: url("../assets/images/content/close.png") no-repeat;
+}
+
+.header__menu-wrapper {
+  display: none;
+  justify-content: space-between;
+  width: 82.7%;
+
+  @media (max-width: $screen-tablet-max-width) {
+    flex-wrap: wrap;
+    padding-top: 10px;
+    width: 100%;
+  }
+}
+
+.header__menu-wrapper-opened {
+  display: flex;
+}
+
+.header__right-block {
+  min-width: 150px;
+
+  @media (max-width: $screen-phone-max-width) {
+    width: 100%;
+  }
+}
+
+.header__right-block-top {
+  position: relative;
+}
+
+.header__geolocation-icon {
+  fill: $c-geolocation-icon;
+  left: 0;
+  position: absolute;
+  stroke: $c-geolocation-icon-stroke;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__geolocation-button {
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  margin-bottom: 10px;
+  padding-left: 27px;
+  padding-right: 0;
+  position: relative;
+  text-align: end;
+  width: 100%;
+
+  @media (max-width: $screen-phone-max-width) {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  &:hover {
+    color: $c-geolocation-hover;
+
+    .header__geolocation-icon {
+      stroke: $c-geolocation-hover;
+    }
+  }
+}
+
+.header__geolocation-popup {
+  background-color: $c-geolocation-popup-bg;
+  border-radius: 8px;
+  box-shadow: 0 0 25px 5px $c-geolocation-popup-shadow;
+  box-sizing: border-box;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 303px;
+  z-index: $z-geolocation-popup;
+
+  @media (max-width: $screen-phone-max-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 30px;
+    width: 100%;
+  }
+
+  &::before {
+    border: 10px solid $c-geolocation-popup-bg;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top: none;
+    content: '';
+    height: 0;
+    margin: auto;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    width: 0;
+
+    @media (max-width: $screen-phone-max-width) {
+      left: 50px;
+      right: auto;
+    }
+  }
+}
+
+.header__geolocation-popup-text {
+  @include reset-indents;
+
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 9px;
+}
+
+.header__geolocation-popup-button {
+  font-size: 14px;
+  line-height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:nth-child(2) {
+    width: 90px;
+  }
+
+  &:nth-child(3) {
+    width: 153px;
+  }
+}
+
+.header__right-block-bottom {
+  display: flex;
+
+  @media (max-width: $screen-tablet-max-width) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.header__sing-in-button {
+  font-size: 14px;
+  line-height: 32px;
+  max-width: 90px;
+  width: 60%;
+}
