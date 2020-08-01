@@ -22,7 +22,7 @@
 
 .header__menu-toggle {
   background-color: $c-header-menu-toggle-bg;
-  background-image: url("../assets/images/content/menu.png");
+  background-image: url("../assets/images/content/close.png");
   background-repeat: no-repeat;
   display: none;
   height: 24px;
@@ -38,15 +38,16 @@
 }
 
 .header__menu-toggle--opened {
-  background: url("../assets/images/content/close.png") no-repeat;
+  background: url("../assets/images/content/menu.png") no-repeat;
 }
 
 .header__menu-wrapper {
-  display: none;
+  display: flex;
   justify-content: space-between;
   width: 82.7%;
 
   @media (max-width: $screen-tablet-max-width) {
+    display: none;
     flex-wrap: wrap;
     padding-top: 10px;
     width: 100%;
